@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .album {
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .album img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="album-grid">
+    <div class="album">
+      <img src="1.jpg" alt="Album 1">
+      <p>Album 1</p>
+    </div>
+    <div class="album">
+      <img src="2.jpg" alt="Album 2">
+      <p>Album 2</p>
+    </div>
+    <div class="album">
+      <img src="3.jpg" alt="Album 3">
+      <p>Album 3</p>
+    </div>
+    <div class="album">
+      <img src="4.jpg" alt="Album 4">
+      <p>Album 4</p>
+    </div>
+    <div class="album">
+      <img src="1.jpg" alt="Album 5">
+      <p>Album 5</p>
+    </div>
+    <div class="album">
+      <img src="2.jpg" alt="Album 6">
+      <p>Album 6</p>
+    </div>
+    <div class="album">
+      <img src="3.jpg" alt="Album 7">
+      <p>Album 7</p>
+    </div>
+    <div class="album">
+      <img src="4.jpg" alt="Album 8">
+      <p>Album 8</p>
+    </div>
+    <div class="album">
+      <img src="1.jpg" alt="Album 9">
+      <p>Album 9</p>
+    </div>
+    <div class="album">
+      <img src="2.jpg" alt="Album 10">
+      <p>Album 10</p>
+    </div>
+    <div class="album">
+      <img src="3.jpg" alt="Album 11">
+      <p>Album 11</p>
+    </div>
+    <div class="album">
+      <img src="4.jpg" alt="Album 12">
+      <p>Album 12</p>
+    </div>
+    <div class="album">
+      <img src="1.jpg" alt="Album 13">
+      <p>Album 13</p>
+    </div>
+    <div class="album">
+      <img src="2.jpg" alt="Album 14">
+      <p>Album 14</p>
+    </div>
+    <div class="album">
+      <img src="3.jpg" alt="Album 15">
+      <p>Album 15</p>
+    </div>
+    <div class="album">
+      <img src="4.jpg" alt="Album 16">
+      <p>Album 16</p>
+    </div>
+  </div>
+</body>
+</html>
