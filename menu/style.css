@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#left,
+#top,
+#right {
+  display: none;
+}
+
+/* label button */
+.menu-toggle-btn {
+  display: block;
+  background-color: #f0f0f0;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.navigation-menu {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* menu left */
+.navigation-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-menu li {
+  border-bottom: 1px solid #ccc;
+}
+
+.navigation-menu li:last-child {
+  border-bottom: none;
+}
+
+.navigation-menu li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.navigation-menu li a:hover {
+  background-color: #ddd;
+}
+
+/* dropdown menu */
+.has-submenu > .submenu {
+  display: none;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+/* Additional styles for top disposition */
+.navigation-menu {
+  width: 200px;
+  top: 0;
+  left: 0;
+}
+
+/* Position buttons styles */
+.position-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.position-input {
+  display: none;
+}
+
+.position-btn {
+  display: block;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.position-btn:hover {
+  background-color: #ddd;
+}
+/* menu left */
+#left:checked ~ .navigation-menu {
+  top: 0;
+  left: 0;
+}
+
+#top:checked ~ .navigation-menu {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+#top:checked ~ .navigation-menu ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#top:checked ~ .navigation-menu li {
+  border-bottom: none;
+  width: 20%;
+}
+#top:checked ~ .navigation-menu .submenu li {
+  width: 100%;
+}
+#top:checked ~ .navigation-menu li a {
+  padding: 10px;
+  width: 100%;
+}
+
+#right:checked ~ .navigation-menu {
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+/* Layout for left disposition */
+.position-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.position-btn {
+  margin: 5px 0;
+}
