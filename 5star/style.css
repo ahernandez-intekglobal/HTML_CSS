@@ -1,10 +1,10 @@
 .star-rating {
     display: inline-block;
-    font-size: 24px; /* Adjust the font size to change star size */
+    font-size: 24px; 
   }
   
   .star-rating input[type="radio"] {
-    display: none; /* Hide the radio buttons */
+    display: none; 
   }
   
   .star-rating label {
@@ -12,11 +12,10 @@
     cursor: pointer;
   }
   
-  /* Style the selected stars */
   .star-rating input[type="radio"]:checked ~ label {
-    color: gold; /* Set the color to show selected stars */
+    color: gold; 
   }
   
   .star-rating label:hover {
-    color: gold; /* Set the color to show selected stars */
+    color: gold; 
   }

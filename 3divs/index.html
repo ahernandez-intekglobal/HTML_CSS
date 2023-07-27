@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Divs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 30%; 
+      height: 150px; 
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .box p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <p>Div 1</p>
+    </div>
+    <div class="box">
+      <p>Div 2</p>
+    </div>
+    <div class="box">
+      <p>Div 3</p>
+    </div>
+  </div>
+</body>
+</html>
