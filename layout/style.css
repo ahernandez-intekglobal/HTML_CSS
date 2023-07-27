@@ -1,0 +1,88 @@
+/* Starting and logic */
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Helvetica;
+}
+main,
+footer,
+nav ul, 
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    --columns: 7;
+}
+section,
+aside,
+nav li,
+nav,
+header h1,
+footer h3{
+    --width: 1;
+    --initialbasis: calc(var(--width, 0) / var(--columns, 16) * 100%);
+    --gap-constant: 0.0%;
+    --gap: calc(calc(var(--columns, 16) - var(--width, 0)) * var(--gap-constant));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+/* layout */
+body{
+    display: flex;
+    flex-flow: column;
+}
+header{
+    background-color: burlywood;
+}
+main{
+    align-items: center;
+    flex-grow: 1;
+}
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+/* Content */
+header h1{
+    --width: 7;
+    text-align: center;
+    margin: 0;
+}
+nav{
+    --width: 7;
+}
+nav ul{
+    --columns: 5;
+    padding-left: 0;
+    margin: 0;
+}
+nav li{
+    list-style-type: none;
+    text-align: center;
+    padding: 0.5rem 0rem 0.5rem;
+}
+main section{
+    --width: 3;
+    overflow: auto;
+}
+.content1{
+    background-color: aquamarine;
+    height: 100%;
+}
+.content2{
+    background-color: aqua;
+    height: 100%;
+}
+aside{
+    background-color: cadetblue;
+    height: 100%;
+}
+footer h3{
+    --width: 7;
+}
+/* style */
+h2,
+h3{
+    text-align: center;
+}

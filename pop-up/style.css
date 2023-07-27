@@ -1,0 +1,14 @@
+.word-pop {
+    display: inline-block;
+    font-family: Verdana;
+}
+
+.word-pop span {
+    display: inline-block;
+    height: 60px;
+
+}
+
+.word-pop span:hover {
+    font-size: 40px;
+}

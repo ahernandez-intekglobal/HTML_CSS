@@ -1,0 +1,84 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: wheat;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    margin-top: 26px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.control:checked + .slide {
+    position: static;
+    opacity: 100;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.slide img {
+    display: block;
+    height: 300px;
+    width: auto;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
