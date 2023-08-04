@@ -1,0 +1,10 @@
+@keyframes bg-rainbow {
+    0%, 100%  {background-color: #000;}
+    12% {background-color: #00f;}
+    25%{background-color: #0ff;}
+    37%{background-color: #0f0;}
+    50%{background-color: #ff0;}
+    62%{background-color: #fff;}
+    75%{background-color: #f0f;}
+    87%{background-color: #f00;}
+}
