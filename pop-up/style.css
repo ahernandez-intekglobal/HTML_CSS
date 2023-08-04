@@ -1,14 +1,16 @@
 .word-pop {
     display: inline-block;
     font-family: Verdana;
+    white-space: nowrap;
 }
 
 .word-pop span {
     display: inline-block;
     height: 60px;
-
+    transition: font-size 0.3s;
 }
 
 .word-pop span:hover {
     font-size: 40px;
+    transform: translateY(-20px);
 }
