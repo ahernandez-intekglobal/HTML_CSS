@@ -1,22 +1,27 @@
 .star-rating {
   display: inline-block;
-  font-size: 0; /* Remove space between inline-block elements */
+  font-size: 0;
 }
 
 .star-rating input[type="radio"] {
-  display: none; /* Hide the radio buttons */
+  display: none;
 }
 
 .star-rating label {
   display: inline-block;
-  width: 24px; /* Width of the star image */
-  height: 24px; /* Height of the star image */
-  background: url('star.png') 0 0; /* Use your sprite image */
+  width: 32px;
+  height: 24px;
+  background: url('stars.png') 0 0;
   cursor: pointer;
   transition: background-position 0.2s;
 }
 
 .star-rating label:hover,
 .star-rating input[type="radio"]:checked ~ label {
-  background-position: 0 -24px; /* Position to show the selected star */
+  background-position: 32px 0;
+}
+
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label ~ label {
+  background-position: 32px 0;
 }
