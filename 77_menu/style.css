@@ -68,9 +68,14 @@ body {
 /* dropdown menu */
 .has-submenu > .submenu {
   display: none;
+  position: absolute;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: max-content;
 }
 
-.has-submenu:hover > .submenu {
+.has-submenu:hover>.submenu {
   display: block;
 }
 
@@ -104,18 +109,35 @@ body {
 .position-btn:hover {
   background-color: #ddd;
 }
+
 /* menu left */
-#left:checked ~ .navigation-menu {
+#left:checked~.navigation-menu {
   top: 0;
   left: 0;
 }
 
-#top:checked ~ .navigation-menu {
+#left:checked ~ .navigation-menu .has-submenu > .submenu {
+  left: 100%;
+  top: 0;
+}
+
+#right:checked ~ .navigation-menu .has-submenu > .submenu {
+  right: 100%;
+  top: 0;
+}
+
+#top:checked~.navigation-menu {
   width: 100%;
   top: 0;
   left: 0;
   height: auto;
   max-width: 100%;
+}
+
+#top:checked~.navigation-menu .submenu {
+  left: 0;
+  right: auto;
+  width: auto;
 }
 
 #top:checked ~ .navigation-menu ul {
@@ -127,18 +149,25 @@ body {
   border-bottom: none;
   width: 20%;
 }
+
 #top:checked ~ .navigation-menu .submenu li {
   width: 100%;
 }
+
 #top:checked ~ .navigation-menu li a {
   padding: 10px;
   width: 100%;
 }
 
-#right:checked ~ .navigation-menu {
+#right:checked~.navigation-menu {
   top: 0;
   right: 0;
   left: auto;
+}
+
+#top:checked ~ .navigation-menu .has-submenu > .submenu {
+  left: 40%;
+  top: 100%;
 }
 
 /* Layout for left disposition */
